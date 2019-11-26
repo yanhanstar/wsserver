@@ -1,0 +1,35 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://learnhow.org/ws/schema" targetNamespace="http://learnhow.org/ws/schema"
+           elementFormDefault="qualified">
+    <xs:element name="getUserRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getUserResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="user" type="tns:user" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="user">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string" />
+            <xs:element name="gender" type="tns:gender" />
+            <xs:element name="age" type="xs:int" />
+            <xs:element name="address" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="gender">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="MALE" />
+            <xs:enumeration value="FEMALE" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

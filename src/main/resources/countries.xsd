@@ -1,5 +1,6 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           xmlns:tns="http://learnhow.org/ws/schema" targetNamespace="http://learnhow.org/ws/schema"
+           xmlns:tns="http://learnhow.org/ws/schema"
+           targetNamespace="http://learnhow.org/ws/schema"
            elementFormDefault="qualified">
     <xs:element name="getCountryRequest">
         <xs:complexType>
